@@ -10,7 +10,7 @@
         die("Connection Failed: ". mysqli_connect_error());
     }
 
-    if(isset($_POST['save'])){
+    if(isset($_POST['create_account'])){
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
