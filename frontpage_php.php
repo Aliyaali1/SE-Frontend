@@ -16,8 +16,7 @@
         $password = $_POST['password'];
         $confirm_password = $_POST['confirm_password'];
 
-        $sql_query = "INSERT INTO user (username, email, password, confirm_password)
-                    VALUES ('$username', '$email', '$gender', '$password', '$confirm_password')";
+        $sql_query = "INSERT INTO user (username, email, password, confirm_password) VALUES ('$username', '$email', '$password', '$confirm_password')";
         
         if (mysqli_query($conn, $sql_query)){
             echo "DETAILS ENTERED";
