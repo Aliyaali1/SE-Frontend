@@ -16,7 +16,7 @@
         $password = $_POST['password'];
         $password_encrypted = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql_query = "INSERT INTO user (username, email, password, confirm_password) VALUES ('$username', '$email', '$password_encrypted')";
+        $sql_query = "INSERT INTO user (username, email, password) VALUES ('$username', '$email', '$password_encrypted')";
         
         if (mysqli_query($conn, $sql_query)){
             echo "DETAILS ENTERED";
