@@ -1,0 +1,57 @@
+body {
+    --color-primary: #009579;
+    --color-primary-dark: #007f67;
+    --color-secondary: #252c6a;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
+    --border-radius: 4px;
+
+    margin-left: -50px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: url(car.jpg);
+    background-size: cover;
+}
+.h1{
+    height:73%;
+    
+    text-align: center;
+}
+.button1{
+    background-color: #007f67;
+    top: 20%;
+    margin-top: 19%;
+    margin-block-end: auto;
+    margin-bottom: 364px;
+    margin-left: -380px;}
+.button2{
+    margin-left: -384px;
+    margin-top: 134px;
+}
+.b1{
+    background-color: var(--color-primary);
+    border: none;
+    color: white;
+    padding: 22px 56px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 28px;
+    border-radius: var(--border-radius);
+}
+
+
+
+.b2{
+    background-color: var(--color-primary);
+    border: none;
+    color: white;
+    padding: 20px 124px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    display: inline-block;
+    font-size: 28px;}
