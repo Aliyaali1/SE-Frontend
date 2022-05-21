@@ -15,6 +15,12 @@ body {
     background: url(car.jpg);
     background-size: cover;
 }
+.renter{
+    font-size: 46px;
+    padding: 2px 27px 19px 33px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0px;}
 
 .container {
     width: 400px;
