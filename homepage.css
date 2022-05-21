@@ -25,6 +25,9 @@ button {
     background-color: #4CAF50
 
   }
+
+button:visited { color: #cc3333; }
+
 .details{
     /* width: 500px; */
     width:300px;
@@ -37,7 +40,9 @@ button {
     background-color: var(--color-secondary);
     overflow: hidden;
   }
-  
+  .topnav a signout{
+    margin-left: 450px;
+  }
   /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
