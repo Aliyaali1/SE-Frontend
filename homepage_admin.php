@@ -1,6 +1,6 @@
 <?php
   // Create database connection
-  $db = mysqli_connect("localhost", "root", "", "image_upload");
+  $db = mysqli_connect("localhost", "root", "", "car_rental");
 
   // Initialize message variable
   $msg = "";
