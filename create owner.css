@@ -39,18 +39,16 @@ body {
     font: 500 1rem 'Quicksand', sans-serif;
 }
 
-/* .form--hidden {
+.form--hidden {
     display: none;
-} */
+}
 .form__title{
     font-weight: bold;
-
     
 }
 .form__title{
     text-decoration: underline;
     font-weight: 500;
-    font-size: 46px;
 }
 .form > *:first-child {
     margin-top: 0;
