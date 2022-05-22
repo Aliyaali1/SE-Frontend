@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Login / Sign Up Form</title>
     <link rel="shortcut icon" href="/assets/favicon.ico">
-    <link rel="stylesheet" href="create_renter.css">
+    <link rel="stylesheet" href="frontpage_renter.css">
 </head>
 <body>
     <?php require_once 'frontpage_php.php';?>
