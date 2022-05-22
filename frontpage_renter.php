@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Login / Sign Up Form</title>
     <link rel="shortcut icon" href="/assets/favicon.ico">
-    <link rel="stylesheet" href="frontpage_owner.css">
+    <link rel="stylesheet" href="frontpage_renter.css">
 </head>
 <body>
     <?php require_once 'frontpage_php.php';?>
@@ -22,7 +22,7 @@
     <?php endif ?>
     
     <div class="container">
-        <div class="owner">Give Car for Rent</div>
+        <div class="owner">Rent A Car</div>
         <form class="form" id="login" action="frontpage_php.php" method="post">
             <h1 class="form__title">Welcome Back!</h1>
             <div class="form__message form__message--error"></div>
