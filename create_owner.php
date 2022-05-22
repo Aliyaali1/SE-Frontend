@@ -45,7 +45,7 @@
         </div>
         <button class="form__button" type="submit" name="create_account">Create Account</button>
         <p class="form__text">
-            <a class="form__link" href="frontpage_owner.html" id="linkLogin" style="font-size: 34px;">Already have an account? Sign in</a>
+            <a class="form__link" href="frontpage_owner.php" id="linkLogin" style="font-size: 34px;">Already have an account? Sign in</a>
         </p>
     </form>    
 </body>
