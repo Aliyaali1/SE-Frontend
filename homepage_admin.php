@@ -50,19 +50,16 @@
         $db = mysqli_connect("localhost", "root", "", "car_rental");
         $sql = "SELECT * FROM car_details";
         $result = mysqli_query($db, $sql);
-        while ($row = mysqli_fetch_array($result)) {
-            
+        while ($row = mysqli_fetch_array($result)) {            
             echo "<div id='img_div'>";
             echo "<img src='images/".$row['image']."' >";
             echo "<p>".$row['text']."</p>";
             echo "</div>";
-            echo "<button id='b1'>Update</button>";
+            echo "<button id='b1' >Update</button>";
             echo "<button id='b2'>Status</button>";
-            echo "<button id='b3'>Delete</button>";
-
+            echo "<button id='b3'>Delete</button>";           
             
-            
-            
+            //echo "<a href='homepage_admin.php?' class='btn'>Delete</a>";
         }
 
      ?>
@@ -78,8 +75,6 @@
             </div>
             <div>
                 <input type="submit" style="border: 4px solid white;background: #009579;padding: 6px;font-size: 22px;font-weight: 800;margin-left: 32px;" name="upload" value="Add Car Image Here">
-                
-            
             </div>
         </form>
     </div>
