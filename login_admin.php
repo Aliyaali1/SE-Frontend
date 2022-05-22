@@ -15,56 +15,55 @@
 
     if (isset($_POST['create_account'])){
         $username = $_POST['username'];
-        $email = $_POST['email'];
         $password = $_POST['password'];
         $password_encrypted = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql_query = "SELECT * FROM user WHERE username LIKE '$username'";
+        $sql_query = "SELECT * FROM admin WHERE username LIKE '$username'";
         $result = $conn->query($sql_query);
         $data = mysqli_fetch_array($result);
 
         if (isset($data)){
-            $_SESSION['message'] = "User Already Exist";
+            $_SESSION['message'] = "Admin Already Exist";
             $_SESSION['msg_type'] = "danger";
-            header('location: frontpage_renter.php');
+            header('location: frontpage_Admin.php');
         }else{    
-            $sql_query = "INSERT INTO user (username, email, password) VALUES ('$username', '$email', '$password_encrypted')";
+            $sql_query = "INSERT INTO admin (username, email, password) VALUES ('$username', '$email', '$password_encrypted')";
             $result = $conn->query($sql_query);
             $conn -> close();
-            $_SESSION['message'] = "New User Registered";
+            $_SESSION['message'] = "New Admin Registered";
             $_SESSION['msg_type'] = "success";
-            header('location: frontpage_renter.php');            
+            header('location: frontpage_Admin.php');            
         }
     }
 
-    if (isset($_POST['user_login'])){
+    if (isset($_POST['admin_login'])){
         $username = $_POST["login_input"];
-        $password = $_POST["user_password"];
+        $password = $_POST["admin_password"];
         
-        $sql = "SELECT * FROM user WHERE username LIKE '$username'";
+        $sql = "SELECT * FROM admin WHERE username LIKE '$username'";
         $result = $conn->query($sql);
         $data = mysqli_fetch_array($result);
 
         if ($data[0] == $username){
-            $sql = "SELECT password FROM user WHERE username = '$username'";
+            $sql = "SELECT password FROM admin WHERE username = '$username'";
             $result = $conn->query($sql);
             $row = mysqli_fetch_array($result);
             $verify = password_verify($password, $row[0]);
             
-            if ($verify) {
-                $_SESSION['message'] = "User Login Successful";
+            if ($result) {
+                $_SESSION['message'] = "Admin Login Successful";
                 $_SESSION['msg_type'] = "success";
                 header('location: homepage.html');
             } else {
                 $_SESSION['message'] = "Incorrect Password";
                 $_SESSION['msg_type'] = "warning";
-                header('location: frontpage_renter.php');
+                header('location: frontpage_Admin.php');
             }
             
         }else{    
-            $_SESSION['message'] = "User does not exist";
+            $_SESSION['message'] = "Admin does not exist";
             $_SESSION['msg_type'] = "danger";
-            header('location: frontpage_renter.php');
+            header('location: frontpage_Admin.php');
         }
     }
 ?>

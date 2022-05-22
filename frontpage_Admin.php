@@ -7,21 +7,35 @@
     <link rel="stylesheet" href="frontpage_Admin.css">
 </head>
 <body>
+    <?php require_once 'frontpage_php.php';?>
+
+    <?php
+    if (isset($_SESSION['message'])): ?>
+
+    <div class="alert alert-<?=$_SESSION['msg_type']?>">
+
+    <?php
+        echo $_SESSION['message'];
+        unset($_SESSION['message']);
+    ?>
+    </div>
+    <?php endif ?>
+
     <div class="container">
     <div class="renter">Admin</div>
       
-        <form class="form" id="login">
+        <form class="form" id="login" action="login_admin.php" method="post">
             <h1 class="form__title">Welcome Back!</h1>
             <div class="form__message form__message--error"></div>
             <div class="form__input-group">
-                <input type="text" class="form__input" autofocus placeholder="Username or email">
+                <input type="text" class="form__input" autofocus placeholder="Username or email" name="login_input">
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="password" class="form__input" autofocus placeholder="Password">
+                <input type="password" class="form__input" autofocus placeholder="Password" name="admin_password">
                 <div class="form__input-error-message"></div>
             </div>
-            <button class="form__button" type="submit">Continue</button>
+            <button class="form__button" type="submit" name="admin_login">Continue</button>
             <p class="form__text">
                 <a href="#" class="form__link">Forgot your password?</a>
             </p>
