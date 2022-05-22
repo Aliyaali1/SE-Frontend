@@ -25,6 +25,7 @@
                     echo "<div id='img_div'>";
                     echo "<img src='images/".$row['image']."' >";
                     echo "<p>".$row['text']."</p>";
+                    echo "<button id='b1'>Status</button>";
                     echo "</div>";
                 }
             ?>

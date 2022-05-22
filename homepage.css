@@ -1,117 +1,86 @@
 body {
-    --color-primary: #009579;
-    --color-primary-dark: #007f67;
-    --color-secondary: #252c6a;
-    --color-error: #cc3333;
-    --color-success: #4bb544;
-    --border-radius: 4px;
-    background-color:whitesmoke;
+  --color-primary: #009579;
+  --color-primary-dark: #007f67;
+  --color-secondary: #252c6a;
+  --color-error: #cc3333;
+  --color-success: #4bb544;
+  --border-radius: 4px;
+  background-color:whitesmoke;
 }
-#searchbar{
-  margin-left: 15%;
-  padding:15px;
-  border-radius: 10px;
+.up{
+  font-size: 42px;
+  background-color: #bfebe3;
+  text-align: center;
+  margin-top: 6px;
+}
+#b1{
+  font-size: 20px;padding: 11px;background: azure;border-radius: 6px;
+  margin-left: 65px;
+}
+p.newcar{
+  font-weight: 800;
+  font-size: 28px;
+  text-align: center;
+}
+.input{
+background: #009579;
+  padding: 11px;
+  font-size: 19px;
+  font-weight: 800;
+}
+  .form{
+  padding: 13px;
+  background: #009579;
+  margin-left: 59px;
+}
+.topnav a:hover {
+  background-color: var(--color-primary);
+  color:#8daa9f;
 }
 
-input[type=text] {
-   width: 30%;
-   -webkit-transition: width 0.15s ease-in-out;
-   transition: width 0.15s ease-in-out;
+#content{
+  width: 50%;
+  margin: 20px auto;
+  border: 1px solid #cbcbcb;
+
 }
-
-/* When the input field gets focus,
-     change its width to 100% */
-input[type=text]:focus {
-  width: 70%;
+form{
+  width: 50%;
+  margin: 20px auto;
 }
-/* 
-#list{
- font-size:  1.5em;
- margin-left: 90px;
-} */
-
-/* .animals{
-display: list-item;    
-}  */
-/* .img{
-    <img src: url(car.jpg))>
-
-} */
-button {
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align:center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    background-color: #4CAF50
-
-  }
-
-button:visited { color: #cc3333; }
-
-.details{
-    /* width: 500px; */
-    width:300px;
+form div{
+  margin-top: 5px;
 }
-/* .container{
-    width: 200px;
-    height: 200px;
-} */
+#img_div{
+  width: 80%;
+  padding: 5px;
+  margin: 15px auto;
+  border: 1px solid #cbcbcb;
+}
+#img_div:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+img {
+      float: left;
+      margin: 5px;
+      width: 337px;
+      height: 220px;
+}
 .topnav {
-    background-color: var(--color-secondary);
-    overflow: hidden;
-  }
-  .topnav a signout{
-    margin-left: 450px;
-  }
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 70px;
-    text-decoration: none;
-    font-size: 21px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: var(--color-primary);
-    color:#8daa9f;
-  }
-  .container1{
-      /* position:relative; */
-      right: 30%;
-      top: 0%;
-  }
-  .container2{
-    height: 100%;
-      position: absolute;
-      right:37.5%;
-      top: 9.5%;
-  }
-  .container3{
-    position: absolute;
-    right: 5%;
-    top:9.5%;
-
-  }
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #456e5f;
-    color: white;
-  }
-  .container4{
-    position: absolute;
-    right:37.5%;
-    top: 91.56%;
+  background-color: var(--color-secondary);
+  overflow: hidden;
 }
-.container5{
-  position: absolute;
-  right:5.5%;
-  top: 91.56%;
+.topnav a signout{
+  margin-left: 450px;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 70px;
+  text-decoration: none;
+  font-size: 21px;
 }
