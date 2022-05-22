@@ -25,7 +25,7 @@
   		$msg = "Failed to upload image";
   	}
   }
-  $result = mysqli_query($db, "SELECT * FROM images");
+//   $result = mysqli_query($db, "SELECT * FROM car_details");
 ?>
 
 <!DOCTYPE html>
