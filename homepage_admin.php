@@ -39,8 +39,8 @@
         <a class="active" href="#home">Home</a>
         <a href="#news">News</a>
         <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="signout" style="margin-left: 345px;">Sign out</a>
+        <a href="about.php">About</a>
+        <a href="main.html" style="margin-left: 345px;">Sign out</a>
       </div>
       <div class="up">Welcome Back Admin!</div>
 <body>
