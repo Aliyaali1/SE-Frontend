@@ -15,7 +15,7 @@
   	// image file directory
   	$target = "images/".basename($image);
 
-  	$sql = "INSERT INTO images (image, text) VALUES ('$image', '$image_text')";
+  	$sql = "INSERT INTO car_details (image, text) VALUES ('$image', '$image_text')";
   	// execute query
   	mysqli_query($db, $sql);
 
@@ -37,13 +37,17 @@
 <body>
     <div id="content">
     <?php
-    while ($row = mysqli_fetch_array($result)) {
-      echo "<div id='img_div'>";
-      	echo "<img src='images/".$row['image']."' >";
-      	echo "<p>".$row['text']."</p>";
-      echo "</div>";
-    }
-  ?>
+        $db = mysqli_connect("localhost", "root", "", "car_rental");
+        $sql = "SELECT * FROM car_details";
+        $result = mysqli_query($db, $sql);
+        
+        while ($row = mysqli_fetch_array($result)) {
+            echo "<div id='img_div'>";
+            echo "<img src='images/".$row['image']."' >";
+            echo "<p>".$row['text']."</p>";
+            echo "</div>";
+        }
+     ?>
         <form method="post" action="homepage_admin.php" enctype="multipart/form-data">
             <input type="hidden" name="size" value="1000000">
             <div>
