@@ -13,8 +13,9 @@ body {
     text-align: center;
 }
 p.newcar{
-    margin-left: 63px;
-    font-size: 24px;
+    font-weight: 800;
+    font-size: 28px;
+    text-align: center;
 }
 .input{
 background: #009579;

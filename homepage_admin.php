@@ -60,7 +60,7 @@
         }
      ?>
      <p class="newcar">Let's add a new car!</p>
-        <form method="post"  style="padding: 13px;background:black;margin-left: 59px;" action="homepage_admin.php" enctype="multipart/form-data">
+        <form method="post"  style="padding: 13px;background: black;margin-left: 180px;" action="homepage_admin.php" enctype="multipart/form-data">
             <input type="hidden" name="size" value="1000000">
             <div>
                 <input type="file" name="image">
@@ -69,7 +69,7 @@
                 <textarea name="text" cols="40" rows="4" placeholder="Say something about this Car"></textarea>
             </div>
             <div>
-                <input type="submit" style="border: 4px solid white;background: #009579;padding: 6px;font-size: 22px;font-weight: 800;border-radius: 24px;" name="upload" value="upload image">
+                <input type="submit" style="border: 4px solid white;background: #009579;padding: 6px;font-size: 22px;font-weight: 800;margin-left: 32px;" name="upload" value="Add Car Image Here">
             </div>
         </form>
     </div>
