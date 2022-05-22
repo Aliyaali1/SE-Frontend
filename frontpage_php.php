@@ -41,12 +41,12 @@
         $username = $_POST["login_input"];
         $password = $_POST["user_password"];
         
-        $sql = "SELECT * FROM $table WHERE username LIKE '$username'";
+        $sql = "SELECT * FROM user WHERE username LIKE '$username'";
         $result = $conn->query($sql);
         $data = mysqli_fetch_array($result);
 
         if ($data[0] == $username){
-            $sql = "SELECT password FROM $table WHERE username = '$username'";
+            $sql = "SELECT password FROM user WHERE username = '$username'";
             $result = $conn->query($sql);
             $row = mysqli_fetch_array($result);
             $verify = password_verify($password, $row[0]);
