@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="contact.css">
     <title>Document</title>
 </head>
+<div class="topnav">
+        <a class="active" href="homepage_admin.php">Home</a>
+        <a href="#news">News</a>
+        <a href="contact.php">Contact</a>
+        <a href="about.php">About</a>
+        <a href="main.php" style="margin-left: 345px;">Sign out</a>
+      </div>
 <body>
     <div class="contact">Contact Us</div>
 <div class="container">

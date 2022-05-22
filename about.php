@@ -10,9 +10,9 @@
 <div class="topnav">
         <a class="active" href="homepage_admin.php">Home</a>
         <a href="#news">News</a>
-        <a href="#contact">Contact</a>
+        <a href="contact.php">Contact</a>
         <a href="about.php">About</a>
-        <a href="main.html" style="margin-left: 345px;">Sign out</a>
+        <a href="main.php" style="margin-left: 345px;">Sign out</a>
       </div>
 
 <body>
