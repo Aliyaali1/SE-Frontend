@@ -13,6 +13,24 @@ body {
     text-align: center;
     margin-top: 6px;
 }
+#b1{
+    font-size: 20px;padding: 11px;background: azure;border-radius: 6px;
+    margin-left: 65px;
+}
+#b2{
+    font-size: 20px;
+    padding: 12px;
+    background: azure;
+    border-radius: 6px;
+    margin-left: 31px;
+}
+#b3{
+    font-size: 20px;
+    padding: 11px;
+    background: azure;
+    border-radius: 6px;
+    margin-left: 23px;
+}
 p.newcar{
     font-weight: 800;
     font-size: 28px;

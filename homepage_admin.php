@@ -36,11 +36,11 @@
     <style> <?php include 'homepage_admin.css'; ?> </style>
 </head>
 <div class="topnav">
-        <a class="active" href="#home">Home</a>
+        <a class="active" href="hompage_admin.php">Home</a>
         <a href="#news">News</a>
         <a href="contact.php">Contact</a>
         <a href="about.php">About</a>
-        <a href="main.html" style="margin-left: 345px;">Sign out</a>
+        <a href="main.php" style="margin-left: 345px;">Sign out</a>
       </div>
       <div class="up">Welcome Back Admin!</div>
 <body>
@@ -50,15 +50,23 @@
         $db = mysqli_connect("localhost", "root", "", "car_rental");
         $sql = "SELECT * FROM car_details";
         $result = mysqli_query($db, $sql);
-        // <button>Delete</button>
         while ($row = mysqli_fetch_array($result)) {
             
             echo "<div id='img_div'>";
             echo "<img src='images/".$row['image']."' >";
             echo "<p>".$row['text']."</p>";
             echo "</div>";
+            echo "<button id='b1'>Update</button>";
+            echo "<button id='b2'>Status</button>";
+            echo "<button id='b3'>Delete</button>";
+
+            
+            
+            
         }
+
      ?>
+     
      <p class="newcar">Let's add a new car!</p>
         <form method="post"  style="padding: 13px;background: black;margin-left: 180px;" action="homepage_admin.php" enctype="multipart/form-data">
             <input type="hidden" name="size" value="1000000">
@@ -70,6 +78,8 @@
             </div>
             <div>
                 <input type="submit" style="border: 4px solid white;background: #009579;padding: 6px;font-size: 22px;font-weight: 800;margin-left: 32px;" name="upload" value="Add Car Image Here">
+                
+            
             </div>
         </form>
     </div>
