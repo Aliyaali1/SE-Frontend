@@ -10,9 +10,11 @@
 
 </head>
 <body>
-    <?php require_once 'frontpage_php.php';?>
+    <?php require_once 'create_renter_php.php';?>
 
     <?php
+    
+
     if (isset($_SESSION['message'])): ?>
 
     <div class="alert alert-<?=$_SESSION['msg_type']?>">
@@ -25,7 +27,7 @@
     </div>
     <?php endif ?>
     
-    <form class="owner" id="createAccount" action="frontpage_php.php" method="post">
+    <form class="owner" id="createAccount" action="create_renter_php.php" method="post">
         <h1 class="form__title" style="font-size: 56px;">Create Account as Renter</h1>
         <div class="form__message form__message--error"></div>
         <div class="form__input-group">

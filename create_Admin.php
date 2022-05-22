@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <?php require_once 'frontpage_php.php';?>
+    <?php require_once 'create_admin_php.php';?>
 
     <?php
     if (isset($_SESSION['message'])): ?>
@@ -23,7 +23,7 @@
     </div>
     <?php endif ?>
    
-        <form class="renter" id="createAccount" action="login_admin.php" method="post">
+        <form class="renter" id="createAccount" action="create_admin_php.php" method="post">
             <h1 class="form__title" style="font-size: 56px;">Create Account as Admin</h1>
             <div class="form__message form__message--error"></div>
             <div class="form__input-group">

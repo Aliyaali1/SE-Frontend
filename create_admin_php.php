@@ -14,10 +14,25 @@
     }
 
     if (isset($_POST['create_account'])){
+        $passPattern = '/^([a-zA-Z0-9\!\@\#\$\%\^\&\*\<\>]){8,15}$/';
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
         $password_encrypted = password_hash($password, PASSWORD_DEFAULT);
+
+        if (!preg_match($passPattern, $password)){
+            $_SESSION['message'] = "Password should have minimum eight characters, at least one uppercase letter, one lowercase letter and one number.";
+            $_SESSION['msg_type'] = "danger";
+            header('location: frontpage_Admin.php');
+            return;
+        }
+
+        if ($password != $confirm_password){
+            $_SESSION['message'] = "Password and Confirm Password dont match.";
+            $_SESSION['msg_type'] = "danger";
+            header('location: frontpage_Admin.php');
+            return;
+        }
 
         $sql_query = "SELECT * FROM admin WHERE username LIKE '$username'";
         $result = $conn->query($sql_query);

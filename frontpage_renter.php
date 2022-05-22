@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="frontpage_renter.css">
 </head>
 <body>
-    <?php require_once 'frontpage_php.php';?>
+    <?php require_once 'create_renter_php.php';?>
 
     <?php
     if (isset($_SESSION['message'])): ?>
@@ -24,7 +24,7 @@
     
     <div class="container">
         <div class="owner">Rent A Car</div>
-        <form class="form" id="login" action="frontpage_php.php" method="post">
+        <form class="form" id="login" action="create_renter_php.php" method="post">
             <h1 class="form__title">Welcome Back!</h1>
             <div class="form__message form__message--error"></div>
             <div class="form__input-group">
