@@ -70,7 +70,7 @@
             if ($verify) {
                 $_SESSION['message'] = "User Login Successful";
                 $_SESSION['msg_type'] = "success";
-                header('location: homepage.html');
+                header('location: homepage.php');
             } else {
                 $_SESSION['message'] = "Incorrect Password";
                 $_SESSION['msg_type'] = "warning";
