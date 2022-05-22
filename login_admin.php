@@ -15,6 +15,7 @@
 
     if (isset($_POST['create_account'])){
         $username = $_POST['username'];
+        $email = $_POST['email'];
         $password = $_POST['password'];
         $password_encrypted = password_hash($password, PASSWORD_DEFAULT);
 
@@ -50,7 +51,7 @@
             $row = mysqli_fetch_array($result);
             $verify = password_verify($password, $row[0]);
             
-            if ($result) {
+            if ($verify) {
                 $_SESSION['message'] = "Admin Login Successful";
                 $_SESSION['msg_type'] = "success";
                 header('location: homepage.html');
