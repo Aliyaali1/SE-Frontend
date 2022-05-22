@@ -33,6 +33,7 @@
 <head>
     <title>Image Upload</title>
     <link rel="stylesheet" href="homepage_admin.css">
+    <style> <?php include 'homepage_admin.css'; ?> </style>
 </head>
 <div class="topnav">
         <a class="active" href="#home">Home</a>
@@ -41,21 +42,25 @@
         <a href="#about">About</a>
         <a href="signout" style="margin-left: 345px;">Sign out</a>
       </div>
+      <div class="up">Welcome Back Admin!</div>
 <body>
+
     <div id="content">
     <?php
         $db = mysqli_connect("localhost", "root", "", "car_rental");
         $sql = "SELECT * FROM car_details";
         $result = mysqli_query($db, $sql);
-        
+        // <button>Delete</button>
         while ($row = mysqli_fetch_array($result)) {
+            
             echo "<div id='img_div'>";
             echo "<img src='images/".$row['image']."' >";
             echo "<p>".$row['text']."</p>";
             echo "</div>";
         }
      ?>
-        <form method="post" action="homepage_admin.php" enctype="multipart/form-data">
+     <p class="newcar">Let's add a new car!</p>
+        <form method="post"  style="padding: 13px;background:black;margin-left: 59px;" action="homepage_admin.php" enctype="multipart/form-data">
             <input type="hidden" name="size" value="1000000">
             <div>
                 <input type="file" name="image">
@@ -64,7 +69,7 @@
                 <textarea name="text" cols="40" rows="4" placeholder="Say something about this Car"></textarea>
             </div>
             <div>
-                <input type="submit" name="upload" value="upload image">
+                <input type="submit" style="border: 4px solid white;background: #009579;padding: 6px;font-size: 22px;font-weight: 800;border-radius: 24px;" name="upload" value="upload image">
             </div>
         </form>
     </div>
