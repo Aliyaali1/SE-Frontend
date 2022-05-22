@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="frontpage owner.css">
 </head>
 <body>
+    <?php require_once 'frontpage_php.php';?>
+
+    <?php
+    if (isset($_SESSION['message'])): ?>
+
+    <div class="alert alert-<?=$_SESSION['msg_type']?>">
+
+    <?php
+        echo $_SESSION['message'];
+        unset($_SESSION['message']);
+    ?>
+    </div>
+    <?php endif ?>
+    
     <div class="container">
         <div class="owner">Give Car for Rent</div>
         <form class="form" id="login">
