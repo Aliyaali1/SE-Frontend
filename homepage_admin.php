@@ -34,6 +34,13 @@
     <title>Image Upload</title>
     <link rel="stylesheet" href="homepage_admin.css">
 </head>
+<div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="signout" style="margin-left: 345px;">Sign out</a>
+      </div>
 <body>
     <div id="content">
     <?php
