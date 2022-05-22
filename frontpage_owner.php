@@ -23,18 +23,18 @@
     
     <div class="container">
         <div class="owner">Give Car for Rent</div>
-        <form class="form" id="login">
+        <form class="form" id="login" action="frontpage_php.php" method="post">
             <h1 class="form__title">Welcome Back!</h1>
             <div class="form__message form__message--error"></div>
             <div class="form__input-group">
-                <input type="text" class="form__input" autofocus placeholder="Username or email">
+                <input type="text" class="form__input" autofocus placeholder="Username or email" name="login_input">
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="password" class="form__input" autofocus placeholder="Password">
+                <input type="password" class="form__input" autofocus placeholder="Password" name="user_password">
                 <div class="form__input-error-message"></div>
             </div>
-            <button class="form__button" type="submit">Continue</button>
+            <button class="form__button" type="submit" name="user_login">Login</button>
             <p class="form__text">
                 <a href="#" class="form__link">Forgot your password?</a>
             </p>

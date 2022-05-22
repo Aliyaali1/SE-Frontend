@@ -13,7 +13,7 @@
         die("Connection Failed: ". mysqli_connect_error());
     }
 
-    if(isset($_POST['create_account'])){
+    if (isset($_POST['create_account'])){
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
@@ -23,23 +23,48 @@
         $result = $conn->query($sql_query);
         $data = mysqli_fetch_array($result);
 
-        if ($data[0] > 1){
+        if (isset($data)){
             $_SESSION['message'] = "User Already Exist";
             $_SESSION['msg_type'] = "danger";
             header('location: frontpage_owner.php');
         }else{    
             $sql_query = "INSERT INTO user (username, email, password) VALUES ('$username', '$email', '$password_encrypted')";
             $result = $conn->query($sql_query);
-                if (mysqli_query($conn, $sql_query)){
-                    $_SESSION['message'] = "New User Registered";
-                    $_SESSION['msg_type'] = "success";
-                    header('location: frontpage_owner.php');
-                }
+            $conn -> close();
+            $_SESSION['message'] = "New User Registered";
+            $_SESSION['msg_type'] = "success";
+            header('location: frontpage_owner.php');            
+        }
+    }
+
+    if (isset($_POST['user_login'])){
+        $username = $_POST["login_input"];
+        $password = $_POST["user_password"];
         
-                else{
-                    echo "ERROR: ", $sql_query, " ", mysqli_error($conn);
-                }
-                mysqli_close($conn);
+        $sql = "SELECT * FROM $table WHERE username LIKE '$username'";
+        $result = $conn->query($sql);
+        $data = mysqli_fetch_array($result);
+
+        if ($data[0] == $username){
+            $sql = "SELECT password FROM $table WHERE username = '$username'";
+            $result = $conn->query($sql);
+            $row = mysqli_fetch_array($result);
+            $verify = password_verify($password, $row[0]);
+            
+            if ($verify) {
+                $_SESSION['message'] = "User Login Successful";
+                $_SESSION['msg_type'] = "success";
+                header('location: homepage.html');
+            } else {
+                $_SESSION['message'] = "Incorrect Password";
+                $_SESSION['msg_type'] = "warning";
+                header('location: frontpage_owner.php');
+            }
+            
+        }else{    
+            $_SESSION['message'] = "User does not exist";
+            $_SESSION['msg_type'] = "danger";
+            header('location: frontpage_owner.php');
         }
     }
 ?>
