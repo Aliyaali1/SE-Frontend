@@ -54,7 +54,7 @@
             if ($verify) {
                 $_SESSION['message'] = "Admin Login Successful";
                 $_SESSION['msg_type'] = "success";
-                header('location: homepage.html');
+                header('location: homepage_admin.php');
             } else {
                 $_SESSION['message'] = "Incorrect Password";
                 $_SESSION['msg_type'] = "warning";
