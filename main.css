@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    background: url(car.jpg);
+    background: url(images/car.jpg);
     background-size: cover;
 }
 .h1{
@@ -20,19 +20,22 @@ body {
     
     text-align: center;
 }
-.button1{
+.button1 {
     background-color: #007f67;
     top: 20%;
     margin-top: 19%;
     margin-block-end: auto;
     margin-bottom: 364px;
-    margin-left: -380px;}
-.button2{
-    margin-left: -384px;
-    margin-top: 134px;
+    margin-left: -380px;
+    padding-left: 0px;
+    width: 333px;
 }
+.button2 {
+        margin-left: -329px;
+        margin-top: 134px;
+    }
 .b1{
-    background-color: var(--color-primary);
+    background-color: #007f67;
     border: none;
     color: white;
     padding: 22px 56px;
@@ -41,12 +44,14 @@ body {
     display: inline-block;
     font-size: 28px;
     border-radius: var(--border-radius);
+    margin-left: 42px;
 }
 
 
 
+
 .b2{
-    background-color: var(--color-primary);
+    background-color: #007f67;
     border: none;
     color: white;
     padding: 20px 124px;
