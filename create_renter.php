@@ -25,7 +25,7 @@
     <?php endif ?>
     
     <form class="owner" id="createAccount" action="frontpage_php.php" method="post">
-        <h1 class="form__title" style="font-size: 56px;">Create Account</h1>
+        <h1 class="form__title" style="font-size: 56px;">Create Account as Renter</h1>
         <div class="form__message form__message--error"></div>
         <div class="form__input-group">
             <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username" name="username">
