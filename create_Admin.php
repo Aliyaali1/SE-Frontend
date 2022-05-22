@@ -16,7 +16,8 @@
     <div class="alert alert-<?=$_SESSION['msg_type']?>">
 
     <?php
-        echo $_SESSION['message'];
+        $myMessage= addslashes($_SESSION["message"]);
+        echo "<script type='text/javascript'>alert('$myMessage');</script>";
         unset($_SESSION['message']);
     ?>
     </div>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login / Sign Up Form</title>
     <link rel="shortcut icon" href="/assets/favicon.ico">
-    <link rel="stylesheet" href="create_owner.css">
+    <link rel="stylesheet" href="create_renter.css">
 
 </head>
 <body>
@@ -18,7 +18,8 @@
     <div class="alert alert-<?=$_SESSION['msg_type']?>">
 
     <?php
-        echo $_SESSION['message'];
+        $myMessage= addslashes($_SESSION["message"]);
+        echo "<script type='text/javascript'>alert('$myMessage');</script>";
         unset($_SESSION['message']);
     ?>
     </div>
