@@ -10,7 +10,7 @@
   	// Get image name
   	$image = $_FILES['image']['name'];
   	// Get text
-  	$image_text = mysqli_real_escape_string($db, $_POST['image_text']);
+  	$image_text = mysqli_real_escape_string($db, $_POST['text']);
 
   	// image file directory
   	$target = "images/".basename($image);
