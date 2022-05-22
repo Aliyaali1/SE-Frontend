@@ -15,7 +15,7 @@
   	// image file directory
   	$target = "images/".basename($image);
 
-  	$sql = "INSERT INTO images (image, image_text) VALUES ('$image', '$image_text')";
+  	$sql = "INSERT INTO images (image, text) VALUES ('$image', '$image_text')";
   	// execute query
   	mysqli_query($db, $sql);
 
@@ -40,7 +40,7 @@
     while ($row = mysqli_fetch_array($result)) {
       echo "<div id='img_div'>";
       	echo "<img src='images/".$row['image']."' >";
-      	echo "<p>".$row['image_text']."</p>";
+      	echo "<p>".$row['text']."</p>";
       echo "</div>";
     }
   ?>
