@@ -7,6 +7,7 @@
     <title>Login / Sign Up Form</title>
     <link rel="shortcut icon" href="/assets/favicon.ico">
     <link rel="stylesheet" href="create_renter.css">
+    <style> <?php include 'create_renter.css'; ?> </style>
 
 </head>
 <body>

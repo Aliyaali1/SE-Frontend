@@ -22,6 +22,12 @@ p.newcar{
   font-size: 28px;
   text-align: center;
 }
+.heading{
+  font-size: 45px;
+  font-weight: 600;
+  background: cadetblue;
+  text-align: center;
+}
 .input{
 background: #009579;
   padding: 11px;

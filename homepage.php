@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Login / Sign Up Form</title>
     <link rel="shortcut icon" href="/assets/favicon.ico">
-    <link rel="stylesheet" href="homepage_admin.css">
+    <link rel="stylesheet" href="homepage.css">
 </head>
     <body>
         <div class="topnav">
@@ -14,6 +14,7 @@
             <a href="about.php">About</a>
             <a href="main.php" style="margin-left: 345px;">Sign out</a>
         </div>
+        <div class="heading">Rent A Car</div>
         <div id="content">
             <?php
                 $db = mysqli_connect("localhost", "root", "", "car_rental");
