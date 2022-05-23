@@ -26,11 +26,16 @@
                     echo "<div id='img_div'>";
                     echo "<img src='images/".$row['image']."' >";
                     echo "<p>".$row['text']."</p>";
-                    echo "<button id='b1'>Book ME</button>";
+                    echo "<button id='b1' onclick='myFunction()'>Book Me</button>";
+                    // echo "function myFunction() {document.getElementById("b1").innerHTML = "Booked";}";
                     echo "</div>";
-                
+      
                 }
+                echo '<script>function myFunction(){document.getElementById("b1").innerHTML = "Booked";}</script>';
+                    
             ?>
+            
+            
         </div>
     </body>
 </html>
