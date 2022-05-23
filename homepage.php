@@ -5,6 +5,14 @@
     <title>Login / Sign Up Form</title>
     <link rel="shortcut icon" href="/assets/favicon.ico">
     <link rel="stylesheet" href="homepage.css">
+
+    <script type="text/javascript">
+                function change(){    
+                    var elem = document.getElementById("b1");
+                    if (elem.innerHTML=="Book Me") elem.innerHTML = "Booked";
+                    else elem.innerHTML = "Book Me";
+                }
+            </script>
 </head>
     <body>
         <div class="topnav">
@@ -16,6 +24,7 @@
         </div>
         <div class="heading">Rent A Car</div>
         <div id="content">
+            
             <?php
                 $db = mysqli_connect("localhost", "root", "", "car_rental");
                 $sql = "SELECT * FROM car_details";
@@ -26,16 +35,13 @@
                     echo "<div id='img_div'>";
                     echo "<img src='images/".$row['image']."' >";
                     echo "<p>".$row['text']."</p>";
-                    echo "<button id='b1' onclick='myFunction()'>Book Me</button>";
-                    // echo "function myFunction() {document.getElementById("b1").innerHTML = "Booked";}";
+                    echo "<button id='b1' onclick='change()'>Book Me</button>";
                     echo "</div>";
-      
                 }
-                echo '<script>function myFunction(){document.getElementById("b1").innerHTML = "Booked";}</script>';
-                    
-            ?>
-            
-            
+                echo '<script type="text/javascript">
+                change();
+                </script>';
+                ?>           
         </div>
     </body>
 </html>
