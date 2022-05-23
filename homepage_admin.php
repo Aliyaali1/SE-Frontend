@@ -57,8 +57,12 @@
             echo "</div>";
             echo "<button id='b1' >Update</button>";
             echo "<button id='b2'>Status</button>";
-            echo "<button id='b3'>Delete</button>";           
-            
+            echo "<button id='b3'>Delete</button>";
+            // echo "<form>";
+            // echo "<form action='delete_car.php' method='post'>";
+            // echo "<input type='submit' name='Delete_Car' value='Delete'>";           
+            // echo "</form>";
+
             //echo "<a href='homepage_admin.php?' class='btn'>Delete</a>";
         }
 
